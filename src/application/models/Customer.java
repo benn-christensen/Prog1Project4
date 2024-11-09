@@ -19,4 +19,8 @@ public class Customer {
     public String getMobileNumber() {
         return mobileNumber;
     }
+
+    public void addOrder(TicketOrder ticketOrder) {
+        orders.add(ticketOrder);
+    }
 }

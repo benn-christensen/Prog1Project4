@@ -26,4 +26,8 @@ public class Show {
     public LocalDate getEndDate() {
         return endDate;
     }
+
+    public void addTicketOrder(TicketOrder ticketOrder) {
+        ticketOrders.add(ticketOrder);
+    }
 }
