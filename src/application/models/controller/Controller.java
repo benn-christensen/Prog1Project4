@@ -33,4 +33,8 @@ public class Controller {
     public static ArrayList<Customer> getCustomers() {
         return Storage.getCustomers();
     }
+
+    public static ArrayList<Show> getShows() {
+        return Storage.getShows();
+    }
 }

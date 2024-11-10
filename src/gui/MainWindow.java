@@ -13,6 +13,7 @@ public class MainWindow extends Application {
         TabPane tabPane = new TabPane();
         tabPane.setTabClosingPolicy(TabPane.TabClosingPolicy.UNAVAILABLE);
         tabPane.getTabs().add(new Tab("Kunder", new CustomerPane()));
+        tabPane.getTabs().add(new Tab("Forestillinger", new ShowPane()));
         Scene scene = new Scene(tabPane);
         stage.setScene(scene);
         stage.show();

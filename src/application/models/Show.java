@@ -36,6 +36,6 @@ public class Show {
     @Override
     public String toString() {
         DateTimeFormatter longDateFormat = DateTimeFormatter.ofLocalizedDate(FormatStyle.LONG);
-        return "Show{" + "navn = " + name + ", premieredato = " + premierDate.format(longDateFormat) + ", sidste dag = " + endDate.format(longDateFormat) + '}';
+        return name + " (" + longDateFormat.format(premierDate) + " - " + longDateFormat.format(endDate) + ")";
     }
 }
