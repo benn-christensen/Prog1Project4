@@ -28,4 +28,9 @@ public class Seat {
     public SeatType getType() {
         return type;
     }
+
+    @Override
+    public String toString() {
+        return "Seat{" + "rækkenummer = " + rowNumber + ", sædenummer = " + seatNumber + ", pris = " + price + ", type = " + type + '}'; //To change body of generated methods, choose Tools | Templates.
+    }
 }

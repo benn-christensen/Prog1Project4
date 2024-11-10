@@ -1,6 +1,8 @@
 package application.models;
 
 import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
+import java.time.format.FormatStyle;
 import java.util.ArrayList;
 
 public class Show {
@@ -29,5 +31,11 @@ public class Show {
 
     public void addTicketOrder(TicketOrder ticketOrder) {
         ticketOrders.add(ticketOrder);
+    }
+
+    @Override
+    public String toString() {
+        DateTimeFormatter longDateFormat = DateTimeFormatter.ofLocalizedDate(FormatStyle.LONG);
+        return "Show{" + "navn = " + name + ", premieredato = " + premierDate.format(longDateFormat) + ", sidste dag = " + endDate.format(longDateFormat) + '}';
     }
 }

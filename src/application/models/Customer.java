@@ -23,4 +23,9 @@ public class Customer {
     public void addOrder(TicketOrder ticketOrder) {
         orders.add(ticketOrder);
     }
+
+    @Override
+    public String toString() {
+        return "Kunde{" + "navn = " + name + ", mobilnummer = " + mobileNumber + '}';
+    }
 }
