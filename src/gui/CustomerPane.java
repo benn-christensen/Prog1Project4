@@ -12,7 +12,6 @@ import javafx.scene.layout.VBox;
 
 public class CustomerPane extends GridPane {
     public CustomerPane() {
-        this.setGridLinesVisible(true);
         this.setPadding(new Insets(5));
         ListView<Customer> customerListView = new ListView<>();
         customerListView.setMinWidth(300);
