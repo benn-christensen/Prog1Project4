@@ -2,6 +2,7 @@ package gui;
 
 import application.models.SeatType;
 import application.models.controller.Controller;
+import javafx.application.Application;
 import storage.Storage;
 
 import java.time.LocalDate;
@@ -11,6 +12,7 @@ public class App {
     public static void main(String[] args) {
         initializeStorage();
         testPrint();
+        Application.launch(MainWindow.class);
     }
 
     private static void testPrint() {
