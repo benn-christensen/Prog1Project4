@@ -3,13 +3,16 @@ package gui;
 import application.models.Customer;
 import application.models.controller.Controller;
 import gui.component.AttributeDisplay;
+import javafx.geometry.HPos;
 import javafx.geometry.Insets;
+import javafx.scene.control.Button;
 import javafx.scene.control.ListView;
 import javafx.scene.layout.GridPane;
 import javafx.scene.layout.VBox;
 
 public class CustomerPane extends GridPane {
     public CustomerPane() {
+        this.setGridLinesVisible(true);
         this.setPadding(new Insets(5));
         ListView<Customer> customerListView = new ListView<>();
         customerListView.setMinWidth(300);
@@ -24,8 +27,23 @@ public class CustomerPane extends GridPane {
         this.add(detailsBox, 1, 0);
 
         customerListView.getSelectionModel().selectedItemProperty().addListener((observable, oldValue, newValue) -> {
-            nameDisplay.setValue(newValue.getName());
-            mobileNumberDisplay.setValue(newValue.getMobileNumber());
+            if (newValue != null) {
+                nameDisplay.setValue(newValue.getName());
+                mobileNumberDisplay.setValue(newValue.getMobileNumber());
+            }
+        });
+        Button createCustomerButton = new Button("Opret kunde");
+        this.add(createCustomerButton, 1, 2);
+        GridPane.setHalignment(createCustomerButton, HPos.RIGHT);
+
+        createCustomerButton.setOnAction(event -> {
+            CreateCustomerDialog createCustomerDialog = new CreateCustomerDialog();
+            createCustomerDialog.showAndWait();
+            Customer newCustomer = createCustomerDialog.getNewCustomer();
+            if (createCustomerDialog.getNewCustomer() != null) {
+                Controller.createCustomer(newCustomer.getName(), newCustomer.getMobileNumber());
+                customerListView.getItems().setAll(Controller.getCustomers());
+            }
         });
     }
 }

@@ -1,7 +1,6 @@
 package gui;
 
 import javafx.application.Application;
-import javafx.geometry.Insets;
 import javafx.scene.Scene;
 import javafx.scene.control.Tab;
 import javafx.scene.control.TabPane;
@@ -9,7 +8,7 @@ import javafx.stage.Stage;
 
 public class MainWindow extends Application {
     @Override
-    public void start(Stage stage) throws Exception {
+    public void start(Stage stage)  {
         TabPane tabPane = new TabPane();
         tabPane.setTabClosingPolicy(TabPane.TabClosingPolicy.UNAVAILABLE);
         tabPane.getTabs().add(new Tab("Kunder", new CustomerPane()));
