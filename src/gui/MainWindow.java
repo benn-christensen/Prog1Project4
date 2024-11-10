@@ -1,6 +1,7 @@
 package gui;
 
 import javafx.application.Application;
+import javafx.geometry.Insets;
 import javafx.scene.Scene;
 import javafx.scene.control.Tab;
 import javafx.scene.control.TabPane;
@@ -12,7 +13,7 @@ public class MainWindow extends Application {
         TabPane tabPane = new TabPane();
         tabPane.setTabClosingPolicy(TabPane.TabClosingPolicy.UNAVAILABLE);
         tabPane.getTabs().add(new Tab("Kunder", new CustomerPane()));
-        Scene scene = new Scene(tabPane, 800, 600);
+        Scene scene = new Scene(tabPane);
         stage.setScene(scene);
         stage.show();
     }
