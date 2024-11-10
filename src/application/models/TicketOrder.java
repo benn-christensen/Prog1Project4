@@ -44,4 +44,14 @@ public class TicketOrder {
         return ticketOrder;
     }
 
+    public boolean hasBooked(int rowNumber, int seatNumber, LocalDate date) {
+        if (date.isEqual(this.date)) {
+            for (Seat seat : this.seats) {
+                if (seat.is(rowNumber, seatNumber)) {
+                    return true;
+                }
+            }
+        }
+        return false;
+    }
 }

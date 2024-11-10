@@ -33,4 +33,8 @@ public class Seat {
     public String toString() {
         return "Seat{" + "rækkenummer = " + rowNumber + ", sædenummer = " + seatNumber + ", pris = " + price + ", type = " + type + '}'; //To change body of generated methods, choose Tools | Templates.
     }
+
+    public boolean is(int rowNumber, int seatNumber) {
+        return this.rowNumber == rowNumber && this.seatNumber == seatNumber;
+    }
 }

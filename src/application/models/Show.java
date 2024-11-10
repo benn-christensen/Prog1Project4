@@ -33,6 +33,15 @@ public class Show {
         ticketOrders.add(ticketOrder);
     }
 
+    public boolean checkAvailability(int rowNumber, int seatNumber, LocalDate date) {
+        for (TicketOrder ticketOrder : ticketOrders) {
+            if (ticketOrder.hasBooked(rowNumber, seatNumber, date)) {
+                return false;
+            }
+        }
+        return true;
+    }
+
     @Override
     public String toString() {
         DateTimeFormatter longDateFormat = DateTimeFormatter.ofLocalizedDate(FormatStyle.LONG);
