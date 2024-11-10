@@ -11,6 +11,7 @@ public class MainWindow extends Application {
     public void start(Stage stage) throws Exception {
         TabPane tabPane = new TabPane();
         tabPane.setTabClosingPolicy(TabPane.TabClosingPolicy.UNAVAILABLE);
+        tabPane.getTabs().add(new Tab("Kunder", new CustomerPane()));
         Scene scene = new Scene(tabPane, 800, 600);
         stage.setScene(scene);
         stage.show();

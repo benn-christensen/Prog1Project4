@@ -1,6 +1,7 @@
 package application.models.controller;
 
 import application.models.*;
+import javafx.collections.ObservableList;
 import storage.Storage;
 
 import java.time.LocalDate;
@@ -27,5 +28,9 @@ public class Controller {
         Seat seat = new Seat(rowNumber, seatNumber, price, type);
         Storage.addSeat(seat);
         return seat;
+    }
+
+    public static ArrayList<Customer> getCustomers() {
+        return Storage.getCustomers();
     }
 }
