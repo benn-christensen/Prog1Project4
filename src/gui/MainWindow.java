@@ -1,5 +1,7 @@
 package gui;
 
+import gui.customer.CustomerPane;
+import gui.show.ShowPane;
 import javafx.application.Application;
 import javafx.scene.Scene;
 import javafx.scene.control.Tab;

@@ -1,7 +1,7 @@
-package gui;
+package gui.show;
 
 import application.models.Show;
-import application.models.controller.Controller;
+import application.controller.Controller;
 import gui.component.AttributeDisplay;
 import javafx.geometry.HPos;
 import javafx.geometry.Insets;

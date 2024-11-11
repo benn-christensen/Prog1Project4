@@ -1,4 +1,4 @@
-package gui;
+package gui.show;
 
 import application.models.Show;
 import gui.component.LabeledDateInput;

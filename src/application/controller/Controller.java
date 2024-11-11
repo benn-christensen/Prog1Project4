@@ -1,4 +1,4 @@
-package application.models.controller;
+package application.controller;
 
 import application.models.*;
 import storage.Storage;

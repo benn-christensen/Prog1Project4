@@ -1,4 +1,4 @@
-package gui;
+package gui.customer;
 
 import application.models.Customer;
 import gui.component.LabeledTextInput;

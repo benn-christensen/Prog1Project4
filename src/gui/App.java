@@ -1,12 +1,11 @@
 package gui;
 
 import application.models.SeatType;
-import application.models.controller.Controller;
+import application.controller.Controller;
 import javafx.application.Application;
 import storage.Storage;
 
 import java.time.LocalDate;
-import java.util.Collections;
 
 public class App {
     public static void main(String[] args) {
